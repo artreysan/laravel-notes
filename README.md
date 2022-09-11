@@ -2,6 +2,7 @@
 ## Temas
 1. Routes
 2. Controllers
+3. Group of Routes
 
 ---
 ### 1. Routes
@@ -22,3 +23,8 @@ Example:
 ```
 php artisan make:controller RutasController
 ```
+
+---
+### 3. Group of Routes
+Notes: (./routes/web.php)
+

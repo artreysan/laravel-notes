@@ -1,20 +1,18 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;//This call to the Controller
-use App\Http\Controllers\CursosController;//This call to the Controller
-use App\Http\Controllers\BlogController;//This call to the Controller
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\CursosController;
+use App\Http\Controllers\BlogController;
 
-//This sentence call the unique function __invoke in app/Http/Controllers/HomeController.php 
 Route::get('/', HomeController::class); 
 
-//This sentence call the function index in (./app/Http/Controllers/CursosController.php) 
-Route::get('cursos',[CursosController::class, 'index']);
+//Group of controller
+Route::controller(CursosController::class)->group(function(){
+    Route::get('cursos','index');
+    Route::get('cursos/{curso}','create'); 
+});
 
-//This sentence call the function create in (./app/Http/Controllers/CursosController.php)
-Route::get('cursos/{curso}',[CursosController::class,'create']); 
-
-//This sentence call the function index in (./app/Http/Controllers/BlogController.php)
 Route::get('blog/{curso}/{categoria?}',[BlogController::class, "index"] );
 
 //Test with:
