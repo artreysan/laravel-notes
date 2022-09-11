@@ -28,6 +28,22 @@ Route::get('cursos/create',function(){
     return "BIenvenido al curso: create 2";
 });
 
+//Para no tener tantas url lo que podemos hacer es lo siguiente
+//Se coloca el ? para idicar que es opcional, si nos e coloca en la url el valor de categoria es null 
+Route::get('blog/{curso}/{categoria?}', function($curso, $categoria = null){
+    if($categoria){
+        return "Bienvenido al blog del curso $curso en la categoria $categoria";
+    }else{
+        return "Bienvenido al blog del curso $curso";
+    }
+    /*
+    Probar con http://localhost:8000/blog/laravel/javascript
+               http://localhost:8000/blog/laravel/c++
+               http://localhost:8000/blog/laravel
+    */
+});
+
+
 
 
 
