@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class BlogController extends Controller{
     public function index($curso, $categoria = null){
         if($categoria){
-            return "Bienvenido al blog del curso $curso en la categoria $categoria";
+            return view('blog.create');
         }else{
             return "Bienvenido al blog del curso $curso";
         }
