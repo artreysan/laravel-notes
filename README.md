@@ -28,3 +28,24 @@ php artisan make:controller RutasController
 ### 3. Group of Routes
 Notes: (./routes/web.php)
 
+
+### 4 Database
+Create database
+```
+CREATE DATABASE blog;
+```
+
+#### Crate table
+Modify file database/migrations/2014_10_12_000000_create_users_table.php for create table 'user' with colums: 
+
+For up the data insert the following command 
+```
+php artisan migrate
+```
+For delete the content in the database insert the following command:
+
+```
+php artisan migrate:fresh --seed
+```
+
+
