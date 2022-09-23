@@ -48,4 +48,27 @@ For delete the content in the database insert the following command:
 php artisan migrate:fresh --seed
 ```
 
+## Create migration
+```
+php artisan make:migration create_<nameMigration>_table
+```
+Output:
+```
+ INFO  Created migration[2022_09_23_071212_<nameMigration>].
+```
+Modify file database/migrations/2022_09_23_071212_cursos.php
 
+For create at new migration with the function UP execute the following command:
+```
+php artisan migrate
+```
+For delete the latest migration execute the following command:
+```
+php artisan migrate:rollback
+```
+
+For modify columns of table in migration created execute the following command:
+```
+php artisan migrate:fresh
+```
+This command delete all register in the table
