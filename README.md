@@ -48,4 +48,5 @@ For delete the content in the database insert the following command:
 php artisan migrate:fresh --seed
 ```
 
+## Create migration
 
