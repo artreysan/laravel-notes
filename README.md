@@ -49,6 +49,7 @@ php artisan migrate:fresh --seed
 ```
 
 ## Create migration
+<<<<<<< HEAD
 ```
 php artisan make:migration create_<nameMigration>_table
 ```
@@ -57,6 +58,8 @@ Output:
  INFO  Created migration[2022_09_23_071212_<nameMigration>].
 ```
 Modify file database/migrations/2022_09_23_071212_cursos.php
+=======
+>>>>>>> b261083 (.....)
 
 For create at new migration with the function UP execute the following command:
 ```
